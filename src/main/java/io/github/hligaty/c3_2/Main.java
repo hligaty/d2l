@@ -14,7 +14,7 @@ import ai.djl.translate.TranslateException;
 
 import java.io.IOException;
 
-import static io.github.hligaty.c3_2.Training.*;
+import static io.github.hligaty.utils.Training.*;
 
 public class Main {
     

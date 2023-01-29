@@ -15,7 +15,7 @@ import ai.djl.training.dataset.ArrayDataset;
 import ai.djl.training.dataset.Batch;
 import ai.djl.training.dataset.Dataset;
 import ai.djl.translate.TranslateException;
-import io.github.hligaty.c3_2.Training;
+import io.github.hligaty.utils.Training;
 import io.github.hligaty.utils.Accumulator;
 import io.github.hligaty.utils.FashionMnistUtils;
 
