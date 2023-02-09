@@ -1,5 +1,6 @@
 package io.github.hligaty.utils;
 
+import ai.djl.metric.Metric;
 import ai.djl.metric.Metrics;
 import ai.djl.ndarray.NDArray;
 import ai.djl.ndarray.NDList;
@@ -94,14 +95,14 @@ public class Training {
                             evaluatorMetrics.put(
                                     "train_epoch_" + evaluator.getName(),
                                     metrics.getMetric("train_epoch_" + evaluator.getName()).stream()
-                                            .mapToDouble(x -> x.getValue().doubleValue())
+                                            .mapToDouble(Metric::getValue)
                                             .toArray());
                             evaluatorMetrics.put(
                                     "validate_epoch_" + evaluator.getName(),
                                     metrics
                                             .getMetric("validate_epoch_" + evaluator.getName())
                                             .stream()
-                                            .mapToDouble(x -> x.getValue().doubleValue())
+                                            .mapToDouble(Metric::getValue)
                                             .toArray());
                         });
 
